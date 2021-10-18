@@ -1,4 +1,4 @@
-# PaleMoon Testing
+# PaleMoon Testing (a.k.a PaleBlueDot)
 
 <!--- FIXME: Update crate and repo names here! --->
 [![Build Status](https://travis-ci.com/EmbarkStudios/tame-oauth.svg?branch=master)](https://travis-ci.com/EmbarkStudios/tame-oauth)
@@ -23,12 +23,7 @@ Please read our [Contributor Guide](CONTRIBUTING.md) for more information on how
 
 ## License
 
-Licensed under either of
-
-* Apache License, Version 2.0, ([LICENSE-APACHE](LICENSE-APACHE) or http://www.apache.org/licenses/LICENSE-2.0)
-* MIT license ([LICENSE-MIT](LICENSE-MIT) or http://opensource.org/licenses/MIT)
-
-at your option.
+Licensed under [GPL](https://www.gnu.org/licenses/gpl-3.0.html) and [Mozilla Public License](https://www.mozilla.org/en-US/MPL/2.0/). See [LICENSE](LICENSE).
 
 ### Contribution
 
