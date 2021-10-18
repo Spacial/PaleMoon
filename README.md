@@ -1,4 +1,8 @@
-# PaleMoon Testing (a.k.a PaleBlueDot)
+<h1 align="center">
+  <img src=".github/img/palebluedot.png" alt="Pale Blue Dot" />
+  <br />
+  Pale Blue Dot
+</h1>
 
 <!--- FIXME: Update crate and repo names here! --->
 [![Build Status](https://travis-ci.com/EmbarkStudios/tame-oauth.svg?branch=master)](https://travis-ci.com/EmbarkStudios/tame-oauth)
