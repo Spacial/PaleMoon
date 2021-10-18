@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src=".github/img/palebluedot.png" alt="Pale Blue Dot" />
+  <img src="/img/palebluedot.png" alt="Pale Blue Dot" />
   <br />
   Pale Blue Dot
 </h1>
