@@ -1,0 +1,34 @@
+--- widget/windows/nsFilePicker.cpp
++++ widget/windows/nsFilePicker.cpp
+@@ -363,7 +366,14 @@
+   dialog->Advise(this, &mFDECookie);
+ 
+   // options
+-  FILEOPENDIALOGOPTIONS fos = FOS_PICKFOLDERS | FOS_OKBUTTONNEEDSINTERACTION;
++  FILEOPENDIALOGOPTIONS fos = FOS_PICKFOLDERS;
++  // Require interaction if the folder picker is triggered by an element that
++  // is potentially unsafe to use the default value in.
++  // Win 10+ only, because this dialog flag is broken in earlier versions.
++  if (IsWin10OrLater() && mRequireInteraction) {
++    fos |= FOS_OKBUTTONNEEDSINTERACTION;
++  }
++
+   dialog->SetOptions(fos);
+  
+   // initial strings
+@@ -462,7 +472,14 @@
+ 
+   FILEOPENDIALOGOPTIONS fos = 0;
+   fos |= FOS_SHAREAWARE | FOS_OVERWRITEPROMPT |
+-         FOS_FORCEFILESYSTEM | FOS_OKBUTTONNEEDSINTERACTION;
++         FOS_FORCEFILESYSTEM;
++  
++  // Require interaction if the file picker is triggered by an element that
++  // is potentially unsafe to use the default value in.
++  // Win 10+ only, because this dialog flag is broken in earlier versions.
++  if (IsWin10OrLater() && mRequireInteraction) {
++    fos |= FOS_OKBUTTONNEEDSINTERACTION;
++  }
+ 
+   // Handle add to recent docs settings
+   if (IsPrivacyModeEnabled() || !mAddToRecentDocs) {
